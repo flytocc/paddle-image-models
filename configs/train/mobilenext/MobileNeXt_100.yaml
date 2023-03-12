@@ -1,0 +1,19 @@
+# Model
+model: MobileNeXt_100
+interpolation: random
+batch_size: 128
+# Optimizer
+use_nesterov: true
+weight_decay: 1e-4
+# Learning rate schedule
+lr: 0.1
+min_lr: 1e-5
+epochs: 200
+t_in_epochs: true
+# Augmentation & regularization
+color_jitter: 0.4
+# Model Exponential Moving Average
+model_ema: true
+# Misc
+amp: true
+use_multi_epochs_loader: true

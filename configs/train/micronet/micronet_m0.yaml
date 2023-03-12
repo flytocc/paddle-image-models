@@ -1,0 +1,19 @@
+# Model
+model: micronet_m0
+interpolation: bilinear
+batch_size: 128
+# Optimizer
+weight_decay: 3e-5
+no_filter_bias_and_bn: true
+# Learning rate schedule
+lr: 0.2
+warmup_lr: 0.0
+min_lr: 0.0
+epochs: 600
+warmup_epochs: 0
+cooldown_epochs: 0
+# Augmentation & regularization
+reprob: 0.0
+smoothing: 0.0
+# Misc
+use_multi_epochs_loader: true

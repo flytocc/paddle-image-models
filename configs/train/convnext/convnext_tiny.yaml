@@ -1,0 +1,25 @@
+# Model
+model: convnext_tiny
+interpolation: bicubic
+batch_size: 128
+update_freq: 8
+sync_bn: true
+# Optimizer
+opt: adamw
+weight_decay: 0.05
+# Learning rate schedule
+lr: 4e-3
+warmup_lr: 0.0
+epochs: 300
+warmup_epochs: 20
+cooldown_epochs: 0
+# Augmentation & regularization
+aa: rand-m9-mstd0.5-inc1
+reprob: 0.25
+mixup: 0.8
+cutmix: 1.0
+# Model Exponential Moving Average
+model_ema: true
+model_ema_decay: 0.9999
+# Misc
+use_multi_epochs_loader: true

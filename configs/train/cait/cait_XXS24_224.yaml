@@ -1,0 +1,28 @@
+# Model
+model: cait_XXS24_224
+crop_pct: 1.0
+interpolation: bicubic
+batch_size: 128
+update_freq: 2
+# Optimizer
+opt: adamw
+weight_decay: 0.05
+# Learning rate schedule
+lr: 1e-3
+warmup_lr: 1e-6
+min_lr: 1e-5
+epochs: 400
+warmup_epochs: 5
+t_in_epochs: true
+# Augmentation & regularization
+aa: rand-m9-mstd0.5-inc1
+reprob: 0.25
+mixup: 0.8
+cutmix: 1.0
+num_aug_repeats: 3
+# Model Exponential Moving Average
+model_ema: true
+model_ema_decay: 0.99996
+# Misc
+amp: true
+use_multi_epochs_loader: true

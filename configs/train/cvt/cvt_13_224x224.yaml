@@ -1,0 +1,24 @@
+# Model
+model: cvt_13_224x224
+interpolation: bicubic
+batch_size: 128
+update_freq: 4
+sync_bn: true
+# Optimizer
+opt: adamw
+weight_decay: 0.05
+# Learning rate schedule
+lr: 2e-3
+warmup_lr: 1e-6
+min_lr: 1e-5
+epochs: 300
+warmup_epochs: 5
+t_in_epochs: true
+# Augmentation & regularization
+aa: rand-m9-mstd0.5-inc1
+reprob: 0.25
+mixup: 0.8
+cutmix: 1.0
+# Misc
+amp: true
+use_multi_epochs_loader: true
